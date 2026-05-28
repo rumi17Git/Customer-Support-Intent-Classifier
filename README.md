@@ -1,4 +1,4 @@
-# Customer-Support-Intent-Classifier
+# E-Commerce AI Routing Hub
 
 An enterprise-grade, hybrid NLP gateway combining a **fine-tuned DistilBERT intent classifier**, deterministic business orchestration, and automated **multilingual translation layers** (`Helsinki-NLP` + `SentencePiece`) designed to satisfy international compliance and routing architectures.
 

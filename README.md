@@ -2,7 +2,7 @@
 
 An enterprise-grade, hybrid NLP gateway combining a **fine-tuned DistilBERT intent classifier**, deterministic business orchestration, and automated **multilingual translation layers** (`Helsinki-NLP` + `SentencePiece`) designed to satisfy international compliance and routing architectures.
 
-🚀 **[Live Interactive Web Demo on Hugging Face Spaces](YOUR_HUGGINGFACE_SPACE_URL_HERE)**
+🚀 **[Live Interactive Web Demo on Hugging Face Spaces](https://huggingface.co/spaces/RummanJ17/ecommerce-ai-routing-hub)**
 
 ---
 
@@ -46,7 +46,7 @@ The gateway handles incoming customer tickets asynchronously across language bou
               ▼                             ▼
        [ Final Response ]            [ Return Payload ]
 
----
+```
 
 ## 🛠️ Core Engineering Features
 
@@ -59,7 +59,6 @@ The gateway handles incoming customer tickets asynchronously across language bou
 
 ## 📦 Project Architecture & Layout
 
-```text
 ├── app/
 │   ├── main.py        # FastAPI Backend Core, Translation Tensors & Thresholding
 │   └── app.py         # Gradio Presentation Interface Layout & HTML Alert Renderers

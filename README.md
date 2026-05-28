@@ -58,7 +58,7 @@ The gateway handles incoming customer tickets asynchronously across language bou
 ---
 
 ## 📦 Project Architecture & Layout
-
+```text
 ├── app/
 │   ├── main.py        # FastAPI Backend Core, Translation Tensors & Thresholding
 │   └── app.py         # Gradio Presentation Interface Layout & HTML Alert Renderers

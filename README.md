@@ -1,6 +1,6 @@
 # E-Commerce AI Routing Hub
 
-An enterprise-grade, hybrid NLP gateway combining a **fine-tuned DistilBERT intent classifier**, deterministic business orchestration, and automated **multilingual translation layers** (`Helsinki-NLP` + `SentencePiece`) designed to satisfy international compliance and routing architectures.
+An enterprise-grade, hybrid NLP gateway combining a **fine-tuned DistilBERT intent classifier**, deterministic business orchestration, and automated **multilingual translation layers** (`Helsinki-NLP` + `SentencePiece`) designed to satisfy international compliance and routing architectures. Fine-tuned on Amazon customer support interactions filtered from the Twitter Customer Support Dataset ([Kaggle](https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter)).
 
 **[Live Interactive Web Demo on Hugging Face Spaces](https://huggingface.co/spaces/RummanJ17/ecommerce-ai-routing-hub)**
 

@@ -11,40 +11,39 @@ An enterprise-grade, hybrid NLP gateway combining a **fine-tuned DistilBERT inte
 The gateway handles incoming customer tickets asynchronously across language boundaries, deciding whether to serve automated deterministic templated responses or escalate to a human reviewer based on mathematical model calibration.
 
 [ User Query (EN or FR) ]
-                         │
-                         ▼
-             [ Language Detection Layer ]
-                         │
-          ┌──────────────┴──────────────┐
-   Detected: English             Detected: French
-          │                             │
-          │                             ▼
-          │                  [ MarianMT Translation ]
-          │                      (FR ──> EN)
-          ▼                             │
- ┌──────────────────────────────────────┴┐
- │   DistilBERT Intent Classification    │
- └───────────────────────────────────────┘
-                         │
-          ┌──────────────┴──────────────┐
-   Confidence ≥ 72%?             Confidence < 72%?
-          │                             │
-          ▼                             ▼
- [ Static Response ]           [ Fallback GenAI Draft ]
-(Deterministic Match)         (Human-in-the-Loop Flagged)
-          │                             │
-          └──────────────┬──────────────┘
-                         │
-          ┌──────────────┴──────────────┐
-   Original Query French?        Original Query English?
-          │                             │
-          ▼                             ▼
-[ MarianMT Translation ]          [ Final Response ]
-    (EN ──> FR)                         │
-          │                             │
-          ▼                             ▼
-  [ Final Response ]            [ Return Payload ]
-
+                             │
+                             ▼
+                [ Language Detection Layer ]
+                             │
+              ┌──────────────┴──────────────┐
+       Detected: English             Detected: French
+              │                             │
+              │                             ▼
+              │                  [ MarianMT Translation ]
+              │                        (FR ──> EN)
+              ▼                             │
+     ┌──────────────────────────────────────┴┐
+     │   DistilBERT Intent Classification    │
+     └───────────────────────────────────────┘
+                             │
+              ┌──────────────┴──────────────┐
+       Confidence ≥ 72%?             Confidence < 72%?
+              │                             │
+              ▼                             ▼
+     [ Static Response ]           [ Fallback GenAI Draft ]
+    (Deterministic Match)         (Human-in-the-Loop Flagged)
+              │                             │
+              └──────────────┬──────────────┘
+                             │
+              ┌──────────────┴──────────────┐
+       Original Query French?        Original Query English?
+              │                             │
+              ▼                             ▼
+   [ MarianMT Translation ]          [ Final Response ]
+         (EN ──> FR)                        │
+              │                             │
+              ▼                             ▼
+       [ Final Response ]            [ Return Payload ]
 ---
 
 ## 🛠️ Core Engineering Features

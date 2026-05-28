@@ -10,7 +10,8 @@ An enterprise-grade, hybrid NLP gateway combining a **fine-tuned DistilBERT inte
 
 The gateway handles incoming customer tickets asynchronously across language boundaries, deciding whether to serve automated deterministic templated responses or escalate to a human reviewer based on mathematical model calibration.
 
-[ User Query (EN or FR) ]
+```text
+                  [ User Query (EN or FR) ]
                              │
                              ▼
                 [ Language Detection Layer ]
@@ -44,6 +45,7 @@ The gateway handles incoming customer tickets asynchronously across language bou
               │                             │
               ▼                             ▼
        [ Final Response ]            [ Return Payload ]
+
 ---
 
 ## 🛠️ Core Engineering Features
